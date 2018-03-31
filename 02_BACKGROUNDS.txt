@@ -1,0 +1,78 @@
+Properties
+----------
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+background-color
+----------------
+
+body {
+    background-color: lightblue;
+}
+
+The color can be a valid color name like "red", a HEX value like "#ff0000" or an RGB value like "rgb(255,0,0)".
+
+The color values can be found in https://www.w3schools.com/cssref/css_colors_legal.asp
+
+background-image
+----------------
+
+By default, the image is repeated so it covers the entire element.
+
+body {
+    background-image: url("paper.gif");
+}
+
+Note :: When using a background image, use an image that does not disturb the text
+
+Background Image - Repeat Horizontally or Vertically
+----------------------------------------------------
+
+By default, the background-image property repeats an image both horizontally and vertically.
+
+But sometimes we may need to repeat it horizontally or vertically so that it may be nice.
+
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x; // visit https://www.w3schools.com/cssref/pr_background-repeat.asp for values
+    //background-repeat: repeat-y;
+}
+
+To show the image only once,
+
+body {
+    background-image: url("image_tree.png");
+    backgrounf-repeat: no-repeat;
+}
+
+The position of the image is specified by the background-position property.
+
+body {
+    background-image: url("img-tree.png");
+    background-repeat: no-repeat;
+    background-position: right top; // visit https://www.w3schools.com/cssref/pr_background-position.asp for the values
+}
+
+To specify that the background image should be fixed (will not scroll with the rest of the page), use the background-attachment property.
+
+body {
+    background-image: url("img-tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed; //visit https://www.w3schools.com/cssref/pr_background-attachment.asp for values
+}
+
+Background shorthand property
+-----------------------------
+
+https://www.w3schools.com/cssref/css3_pr_background.asp for more info
+
+body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}
+
+
