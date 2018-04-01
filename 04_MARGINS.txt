@@ -1,0 +1,84 @@
+The css margin properties are used to create space around elements, outside of any defined borders.
+
+p {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 80px;
+}
+
+all margins properties can have following values,
+- auto -> the browser calculates the margin
+- length -> specifies a mergin in px, pt, cm etc
+- % -> specifies a margin in % of the width of the containing element
+- inherit -> specifies that the margin should be inherited from the parent element
+
+margin - shorthand property
+---------------------------
+
+p {
+	margin: 25px 50px 75px 100px; // top right bottom and left
+}
+
+if the margin has three properties
+
+p {
+	margin: 25px 50px 75px;  // top(25px) (right and left)(50px) bottom(75px)
+}
+
+if the margin has two properties
+
+p {
+	margin: 25px 50px; // (top and bottom)(25px) (right and left)(50px)
+}
+
+if the margin has only one property
+
+p {
+	margin: 25px; // all four margins are 25px
+}
+
+The auto value
+--------------
+
+you can set the margin property to auto to horizontally center the element within its container
+
+The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
+
+div {
+	width: 300px;
+	margin: auto;
+	border: 1px solid red;
+}
+
+The inherit value
+-----------------
+
+div {
+	border: 1px solid red;
+	margin-left: 100px;
+}
+
+p.ex1 {
+	margin-left: inherit;
+}
+
+Margin collapse
+---------------
+
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the larget of the two margins.
+
+This does not happen on the left and right margins! Only top and bottom margins!
+
+h1 {
+	margin: 0 0 50px 0;
+}
+
+h2 {
+	margin 20px 0 0 0;
+}
+
+In the example above, the <h1> element has a bottom margin of 50px and the <h2> element has a top margin to 20px.
+
+Common sense would seem to suggest that the vertical margin between the <h1> and the <h2> would be a total of 70px(50 px + 20 px). But 
+due to margin collapse, the actual margin ends up being 50px.

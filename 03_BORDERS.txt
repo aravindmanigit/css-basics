@@ -71,7 +71,7 @@ border-style: dotted solid double dashed;
 	bottom border is double
 	left border is dashed
 
-border-style: dotted solid double;
+border-style: dotted solid double; 
 ->	top border is dotted;
 	right and left border is solid
 	bottom border is double
