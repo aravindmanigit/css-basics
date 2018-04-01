@@ -1,0 +1,63 @@
+The css padding properties are used to genereate space around an element's content, inside of any defined borders.
+
+padding - Individual sides
+--------------------------
+
+div {
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+}
+
+All padding properties can have the following values
+-> length - specifies in px, pt, cm etc.
+-> % - specifies a padding in % of the the containing element
+-> inherit - specifies that the padding should be inherited from the parent element.
+
+Note : negative values are not allowed
+
+short hand properties
+---------------------
+
+div {
+	padding: 25px 50px 75px 100px; // top right bottom left
+}
+
+div {
+	padding: 25px 50px 75px; // top (right+left) bottom
+}
+
+div {
+	padding: 25px 50px; // (top+bottom) (right+left)
+}
+
+div {
+	padding: 25px; //all sides
+}
+
+padding and wlwment width
+-------------------------
+
+The css width property specifies the width of the element's content area. The content area is the portion inside the 
+padding, border and margin of an element (box model)
+
+so if an element has a specified width, the padding added to that element will be added to the total width of the 
+element. This is often an undesirable result.
+
+In the following example the <div> element is given a width of 300px. However, the actual rendered width of the 
+<div> element will be 350 px (300px + 25px left padding + 25px right padding)
+
+div {
+	width: 300px;
+	padding: 25px;
+}
+
+To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the 
+element to maintain its width; if you increase the padding, the available content space will decrease.
+
+div {
+	width: 300px;
+	padding: 25px;
+	box-sizing: border-box; //default value of box-sizing is content-box
+}
